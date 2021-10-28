@@ -4,7 +4,7 @@
       <title>get rickrolled LLLL</title>
    </head>
    <body>
-       <video id="rickroll" autoplay loop width="100%" muted: 'muted'>
+       <video id="rickroll" loop width="100%">
 
     <source src="https://fightingox1.github.io/rickroll/rickroll-master/rickroll-master/rickroll.mp4"
             type="video/mp4">
@@ -15,16 +15,10 @@
          function setTitle() {
             document.title = "Rickroll"
          }
-           function toggleMute() {
 
-  var video=document.getElementById("rickroll");
-
-  video.muted = !video.muted;
-
-}
+         var video=document.getElementById("rickroll");
          window.onload = setTitle;
-         window.onload = toggleMute;
-       if(e.key == 'e'){toggleMute()}
+       if(e.key == 'e'){video.play()}
        </script>
    </body>
 </html>
