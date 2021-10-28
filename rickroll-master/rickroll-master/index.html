@@ -1,24 +1,42 @@
 <!DOCTYPE html>
-<html>
-   <head>
+<html><head>
       <title>get rickrolled LLLL</title>
    </head>
    <body>
-       <video id="rickroll" loop width="100%">
+      <audio id="audio" controls style="display:none">
+  <source src="https://fightingox1.github.io/rickroll/rickroll-master/rickroll-master/Never%20Gonna%20Give%20You%20Up%20Original.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+</audio>
+       <video id="rickroll" autoplay="" loop="" width="100%" muted:="" 'muted'="" style="position:absolute;">
 
-    <source src="https://fightingox1.github.io/rickroll/rickroll-master/rickroll-master/rickroll.mp4"
-            type="video/mp4">
+    <source src="https://fightingox1.github.io/rickroll/rickroll-master/rickroll-master/rickroll.mp4" type="video/mp4">
 
     Sorry, your browser doesn't support embedded videos.
 </video>
+      
+      
       <script>
          function setTitle() {
             document.title = "Rickroll"
          }
+           function toggleMute() {
 
-         var video=document.getElementById("rickroll");
+  var video=document.getElementById("rickroll");
+
+  video.muted = !video.muted;
+
+}
          window.onload = setTitle;
-       if(e.key == 'e'){video.play()}
+         window.onload = toggleMute;
+       if(e.key == 'e'){toggleMute()}
+         
+         document.addEventListener('keydown', function(e) {
+  if(e.key == 'e'){
+    document.getElementById('audio').play();
+  }
+});
+         
        </script>
-   </body>
-</html>
+   
+     
+
+</body></html>
